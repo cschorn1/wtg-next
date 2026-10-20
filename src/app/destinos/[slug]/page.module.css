@@ -1,0 +1,168 @@
+.page {
+  padding: 3rem clamp(1.5rem, 6vw, 5rem) 4rem;
+}
+
+.destination {
+  display: grid;
+  max-width: 80rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-areas:
+    "image summary"
+    "image description"
+    "back back";
+  align-items: start;
+  gap: 1.5rem 2.5rem;
+  margin-inline: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  min-height: 24rem;
+  max-height: 38rem;
+  grid-area: image;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.summary {
+  grid-area: summary;
+  color: #fff;
+}
+
+.summary h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.summary > p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.facts {
+  display: grid;
+  gap: 1rem;
+}
+
+.facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.facts dd {
+  color: #fff;
+  font-weight: 600;
+}
+
+.description {
+  grid-area: description;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.backButton {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  min-height: 52px;
+  grid-area: back;
+  align-items: center;
+  justify-self: start;
+  gap: 0.75rem;
+  padding: 0 1.75rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  color: #143642;
+  background-color: #fff;
+  font-weight: 700;
+  transition:
+    color 350ms ease,
+    transform 220ms ease;
+}
+
+.backButton::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: var(--accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 420ms ease;
+}
+
+.backButton span {
+  position: relative;
+  z-index: 1;
+}
+
+.backButton:hover,
+.backButton:focus-visible {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.backButton:hover::before,
+.backButton:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.backButton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .destination {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+      "image summary"
+      "description description"
+      "back back";
+  }
+
+  .image {
+    min-height: 20rem;
+    max-height: 30rem;
+  }
+
+  .facts {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .destination {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "image"
+      "summary"
+      "description"
+      "back";
+    gap: 1.25rem;
+  }
+
+  .image {
+    height: 16rem;
+    min-height: 0;
+  }
+
+  .summary h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backButton,
+  .backButton::before {
+    transition: none;
+  }
+}

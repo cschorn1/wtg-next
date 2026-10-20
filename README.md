@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# World Tour Guide
 
-## Getting Started
+Portal de viagens feito com Next.js, React e TypeScript. A página inicial apresenta o projeto e a página de destinos exibe uma lista local de lugares para conhecer.
 
-First, run the development server:
+## Requisitos
+
+- Node.js
+- npm
+
+## Como executar
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev    # inicia o servidor de desenvolvimento
+npm run lint   # executa o ESLint
+npm run build  # cria a versão de produção
+npm run start  # inicia o servidor de produção após o build
+```
 
-## Learn More
+## Páginas e funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- `/`: apresentação do portal, hero com imagem de fundo e link para destinos.
+- `/destinos`: lista os destinos definidos em `src/lib/destinos.json`, renderizados com `.map()`.
+- `/destinos/[slug]`: página individual de cada destino, gerada a partir do `slug` no JSON.
+- O Header e o Footer são compartilhados entre as páginas pelo componente Layout.
+- Os componentes e as páginas usam CSS Modules para manter seus estilos isolados.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Organização principal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+public/
+  images/                 # imagens dos destinos, hero e marca
+src/
+  app/
+    components/
+      CardDestino/        # card reutilizável de destino
+      Footer/
+      Grid/               # grade responsiva para os cards
+      Header/
+      Hero/               # hero da página inicial
+      HeroDestino/        # hero da página de destinos
+      Layout/             # Header, conteúdo da página e Footer
+    destinos/
+      [slug]/             # detalhes de um destino
+      page.tsx            # rota /destinos
+    layout.tsx            # layout raiz do Next.js
+    page.tsx              # rota /
+  lib/
+    destinos.json         # dados locais dos destinos
+  styles/
+    globals.css           # estilos globais e tema
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+As imagens guardadas em `public/` são referenciadas a partir da raiz do site. Por exemplo, `public/images/bahia-do-sancho.jpg` é usado como `/images/bahia-do-sancho.jpg`.

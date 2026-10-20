@@ -1,0 +1,6 @@
+.page {
+  min-height: 100%;
+  padding: 0 clamp(2rem, 7vw, 6rem) 4rem;
+  color: var(--foreground);
+  background-color: transparent;
+}

@@ -1,0 +1,19 @@
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 15rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  color: #fff;
+  text-align: center;
+  background-position: center 55%;
+  background-size: cover;
+}
+
+.hero h1 {
+  max-width: 48rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}

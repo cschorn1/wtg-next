@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "slug": "baia-do-sancho",
+    "nome": "Baía do Sancho",
+    "local": "Brasil, América do Sul",
+    "imagem": "/images/bahia-do-sancho.jpg",
+    "descricao": "Cercada por falésias e vegetação exuberante, possui águas cristalinas em tons de azul e verde, sendo ideal para mergulho e contato com a natureza.",
+    "idioma": "Português",
+    "moeda": "Real brasileiro (BRL)"
+  },
+  {
+    "id": 2,
+    "slug": "whitehaven-beach",
+    "nome": "Whitehaven Beach",
+    "local": "Austrália, Oceania",
+    "imagem": "/images/whitehaven-beach.jpg",
+    "descricao": "Famosa por sua areia branca composta principalmente por sílica e suas águas azul-turquesa, oferece paisagens impressionantes e passeios de barco.",
+    "idioma": "Inglês",
+    "moeda": "Dólar australiano (AUD)"
+  },
+  {
+    "id": 3,
+    "slug": "anse-source-dargent",
+    "nome": "Anse Source d'Argent",
+    "local": "Seicheles, África",
+    "imagem": "/images/anse-source-dargent.jpg",
+    "descricao": "Conhecida por suas enormes formações de granito, areia clara com tons rosados e águas cristalinas, é uma das praias mais fotogênicas do mundo.",
+    "idioma": "Crioulo seichelense, inglês e francês",
+    "moeda": "Rupia seichelense (SCR)"
+  },
+  {
+    "id": 4,
+    "slug": "veligandu-island",
+    "nome": "Veligandu Island",
+    "local": "Maldivas, Ásia",
+    "imagem": "/images/veligandu-island.jpeg",
+    "descricao": "Uma ilha tropical cercada por lagoas azul-turquesa, recifes de coral e praias de areia branca, ideal para mergulho e experiências de luxo.",
+    "idioma": "Dhivehi",
+    "moeda": "Rufiyaa maldiva (MVR)"
+  },
+  {
+    "id": 5,
+    "slug": "grace-bay",
+    "nome": "Grace Bay",
+    "local": "Ilhas Turcas e Caicos, América do Norte",
+    "imagem": "/images/grace-bay.jpg",
+    "descricao": "Possui uma extensa faixa de areia branca, mar azul-turquesa e águas geralmente tranquilas, além de boa infraestrutura turística.",
+    "idioma": "Inglês",
+    "moeda": "Dólar americano (USD)"
+  },
+  {
+    "id": 6,
+    "slug": "praia-de-matira",
+    "nome": "Praia de Matira",
+    "local": "Polinésia Francesa, Oceania",
+    "imagem": "/images/praia-de-matira.webp",
+    "descricao": "Localizada em Bora Bora, combina areia clara, águas rasas e cristalinas e montanhas vulcânicas ao fundo, criando um cenário tropical paradisíaco.",
+    "idioma": "Francês e taitiano",
+    "moeda": "Franco CFP (XPF)"
+  },
+  {
+    "id": 7,
+    "slug": "navagio-beach",
+    "nome": "Navagio Beach",
+    "local": "Grécia, Europa",
+    "imagem": "/images/navagio-beach.avif",
+    "descricao": "Uma enseada cercada por enormes paredões de calcário, águas azuis intensas e os restos de um navio naufragado que se tornou símbolo da praia.",
+    "idioma": "Grego",
+    "moeda": "Euro (EUR)"
+  },
+  {
+    "id": 8,
+    "slug": "pink-sands-beach",
+    "nome": "Pink Sands Beach",
+    "local": "Bahamas, América do Norte",
+    "imagem": "/images/pink-sands-beach.webp",
+    "descricao": "Famosa por sua areia rosada, formada parcialmente por fragmentos de organismos marinhos, contrasta com o azul do oceano e oferece uma paisagem singular.",
+    "idioma": "Inglês",
+    "moeda": "Dólar bahamense (BSD)"
+  }
+]
